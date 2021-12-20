@@ -11,6 +11,33 @@ class GildedRose {
         this.items = items;
     }
     
+    
+    /*
+     * 
+     * Main method
+     * 
+     * 
+     * */
+    public void updateQuality() {
+    	// début de la boucle
+    	// déplacement dans le tableau d'Item
+        for (int i = 0; i < items.length; i++) {
+            if (specialItemCheck(items[i])){
+                
+            	specialItemUpdate(items[i]);
+            	  	
+            } else {
+            	normalItemUpdate(items[i]);
+            }
+            
+            sellInUpdate(items[i]);
+            
+            afterSellInCheck(items[i]);
+        }
+     
+    }
+  
+      
   //---------------------------
     /**
      *
@@ -88,7 +115,13 @@ class GildedRose {
     	}   	
     }
   //---------------------------
-
+    /**
+    *
+    * Mets à jour la valeur sellin d'un objet
+    * 
+    * @param	Item	l'objet Item
+    * 
+    * */
     public void sellInUpdate(Item item) {
     	if(!item.name.equals("Sulfuras, Hand of Ragnaros") ) {
     		item.sellIn --;
@@ -98,7 +131,14 @@ class GildedRose {
     }
     
 //---------------------------
-    
+    /**
+    *
+    * vérifie le sellin de Backstage passes 
+    * met la quality si le sellin est égale ou inférieur à 0
+    * 
+    * @param	Item	l'objet Item
+    * 
+    * */
     public void afterSellInCheck(Item item) {
     	if (item.sellIn <= 0 && item.name.equals("Backstage passes to a TAFKAL80ETC concert" )){
     			item.quality = 0;
@@ -107,22 +147,5 @@ class GildedRose {
     }
   //---------------------------  
     
-    public void updateQuality() {
-    	// début de la boucle
-    	// déplacement dans le tableau d'Item
-        for (int i = 0; i < items.length; i++) {
-            if (specialItemCheck(items[i])){
-                
-            	specialItemUpdate(items[i]);
-            	  	
-            } else {
-            	normalItemUpdate(items[i]);
-            }
-            
-            sellInUpdate(items[i]);
-            
-            afterSellInCheck(items[i]);
-        }
-     
-    }
+    
 }
