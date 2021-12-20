@@ -1,5 +1,9 @@
-GildedRose JAVA Version  
+# GildedRose JAVA Version  
 Refactoring exercice
+
+[Base Project](https://github.com/emilybache/GildedRose-Refactoring-Kata)
+
+[Gilded Rose Requirements](https://github.com/emilybache/GildedRose-Refactoring-Kata/blob/main/GildedRoseRequirements.txt)
 
 # Spécification de la Rose dorée (Gilded Rose)
 
@@ -44,7 +48,3 @@ Cependant, nous devons vous prévenir, vous ne devez en aucun cas modifier la cl
 Juste une précision, un produit ne peut jamais voir sa qualité augmenter au-dessus de 50, cependant "Sulfuras" est un objet légendaire et comme tel sa qualité est de 80 et elle ne change jamais.
 
 
-
-[Base Project](https://github.com/emilybache/GildedRose-Refactoring-Kata)
-
-[Gilded Rose Requirements](https://github.com/emilybache/GildedRose-Refactoring-Kata/blob/main/GildedRoseRequirements.txt)
